@@ -4,8 +4,8 @@
       <ion-menu content-id="main-content" type="overlay">
         <ion-content>
           <ion-list id="inbox-list">
-            <ion-list-header>Inbox</ion-list-header>
-            <ion-note>hi@ionicframework.com</ion-note>
+            <ion-list-header>PRTS-Dashboard</ion-list-header>
+            <ion-note>明日方舟相关资讯</ion-note>
 
             <ion-menu-toggle
               auto-hide="false"
@@ -22,7 +22,7 @@
                 :class="{ selected: selectedIndex === i }"
               >
                 <ion-icon
-                  v-slot="start"
+                  slot="start"
                   :ios="p.iosIcon"
                   :md="p.mdIcon"
                 ></ion-icon>
@@ -31,7 +31,7 @@
             </ion-menu-toggle>
           </ion-list>
 
-          <ion-list id="labels-list">
+          <!-- <ion-list id="labels-list">
             <ion-list-header>Labels</ion-list-header>
 
             <ion-item
@@ -40,13 +40,13 @@
               :key="index"
             >
               <ion-icon
-                v-slot="start"
+                slot="start"
                 :ios="bookmarkOutline"
                 :md="bookmarkSharp"
               ></ion-icon>
               <ion-label>{{ label }}</ion-label>
             </ion-item>
-          </ion-list>
+          </ion-list> -->
         </ion-content>
       </ion-menu>
       <ion-router-outlet id="main-content"></ion-router-outlet>
@@ -72,20 +72,14 @@ import {
 import { defineComponent, ref } from "vue";
 import { useRoute } from "vue-router";
 import {
-  archiveOutline,
-  archiveSharp,
-  bookmarkOutline,
-  bookmarkSharp,
-  heartOutline,
-  heartSharp,
-  mailOutline,
-  mailSharp,
-  paperPlaneOutline,
-  paperPlaneSharp,
-  trashOutline,
-  trashSharp,
-  warningOutline,
-  warningSharp,
+  newspaperOutline,
+  newspaperSharp,
+  golfOutline,
+  golfSharp,
+  libraryOutline,
+  librarySharp,
+  linkOutline,
+  linkSharp,
 } from "ionicons/icons";
 
 export default defineComponent({
@@ -108,40 +102,28 @@ export default defineComponent({
     const selectedIndex = ref(0);
     const appPages = [
       {
-        title: "Inbox",
-        url: "/folder/Inbox",
-        iosIcon: mailOutline,
-        mdIcon: mailSharp,
+        title: "官方公告",
+        url: "/folder/Announcements",
+        iosIcon: newspaperOutline,
+        mdIcon: newspaperSharp,
       },
       {
-        title: "Outbox",
-        url: "/folder/Outbox",
-        iosIcon: paperPlaneOutline,
-        mdIcon: paperPlaneSharp,
+        title: "热门关卡",
+        url: "/folder/Stages",
+        iosIcon: golfOutline,
+        mdIcon: golfSharp,
       },
       {
-        title: "Favorites",
-        url: "/folder/Favorites",
-        iosIcon: heartOutline,
-        mdIcon: heartSharp,
+        title: "资料查询",
+        url: "/folder/Archive",
+        iosIcon: libraryOutline,
+        mdIcon: librarySharp,
       },
       {
-        title: "Archived",
-        url: "/folder/Archived",
-        iosIcon: archiveOutline,
-        mdIcon: archiveSharp,
-      },
-      {
-        title: "Trash",
-        url: "/folder/Trash",
-        iosIcon: trashOutline,
-        mdIcon: trashSharp,
-      },
-      {
-        title: "Spam",
-        url: "/folder/Spam",
-        iosIcon: warningOutline,
-        mdIcon: warningSharp,
+        title: "其他链接",
+        url: "/folder/Links",
+        iosIcon: linkOutline,
+        mdIcon: linkSharp,
       },
     ];
     const labels = [
@@ -166,20 +148,14 @@ export default defineComponent({
       selectedIndex,
       appPages,
       labels,
-      archiveOutline,
-      archiveSharp,
-      bookmarkOutline,
-      bookmarkSharp,
-      heartOutline,
-      heartSharp,
-      mailOutline,
-      mailSharp,
-      paperPlaneOutline,
-      paperPlaneSharp,
-      trashOutline,
-      trashSharp,
-      warningOutline,
-      warningSharp,
+      newspaperOutline,
+      newspaperSharp,
+      golfOutline,
+      golfSharp,
+      libraryOutline,
+      librarySharp,
+      linkOutline,
+      linkSharp,
       isSelected: (url: string) => (url === route.path ? "selected" : ""),
     };
   },
