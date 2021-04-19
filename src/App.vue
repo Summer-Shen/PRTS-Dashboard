@@ -5,7 +5,7 @@
         <ion-content>
           <ion-list id="inbox-list">
             <ion-list-header>PRTS-Dashboard</ion-list-header>
-            <ion-note>明日方舟相关资讯</ion-note>
+            <ion-note>明日方舟资讯</ion-note>
 
             <ion-menu-toggle
               auto-hide="false"
@@ -108,7 +108,7 @@ export default defineComponent({
         mdIcon: newspaperSharp,
       },
       {
-        title: "热门关卡",
+        title: "关卡掉落",
         url: "/stages",
         iosIcon: golfOutline,
         mdIcon: golfSharp,
