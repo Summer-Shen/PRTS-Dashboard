@@ -103,25 +103,25 @@ export default defineComponent({
     const appPages = [
       {
         title: "官方公告",
-        url: "/folder/Announcements",
+        url: "/announcements",
         iosIcon: newspaperOutline,
         mdIcon: newspaperSharp,
       },
       {
         title: "热门关卡",
-        url: "/folder/Stages",
+        url: "/stages",
         iosIcon: golfOutline,
         mdIcon: golfSharp,
       },
       {
         title: "资料查询",
-        url: "/folder/Archive",
+        url: "/archive",
         iosIcon: libraryOutline,
         mdIcon: librarySharp,
       },
       {
         title: "其他链接",
-        url: "/folder/Links",
+        url: "/links",
         iosIcon: linkOutline,
         mdIcon: linkSharp,
       },
@@ -135,7 +135,7 @@ export default defineComponent({
     //   "Reminders",
     // ];
 
-    const path = window.location.pathname.split("folder/")[1];
+    const path = window.location.pathname;
     if (path !== undefined) {
       selectedIndex.value = appPages.findIndex(
         (page) => page.title.toLowerCase() === path.toLowerCase()

@@ -5,18 +5,18 @@
         <ion-buttons slot="start">
           <ion-menu-button color="primary"></ion-menu-button>
         </ion-buttons>
-        <ion-title>{{ $route.params.id }}</ion-title>
+        <ion-title>其他链接</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">{{ $route.params.id }}</ion-title>
+          <ion-title size="large">其他链接</ion-title>
         </ion-toolbar>
       </ion-header>
 
-      <div id="container">
+      <!-- <div id="container">
         <strong class="capitalize">{{ $route.params.id }}</strong>
         <p>
           Explore
@@ -27,7 +27,7 @@
             >UI Components</a
           >
         </p>
-      </div>
+      </div> -->
     </ion-content>
   </ion-page>
 </template>
@@ -44,7 +44,7 @@ import {
 } from "@ionic/vue";
 
 export default {
-  name: "Folder",
+  name: "Links",
   components: {
     IonButtons,
     IonContent,
