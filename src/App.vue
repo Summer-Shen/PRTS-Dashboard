@@ -113,12 +113,12 @@ export default defineComponent({
         iosIcon: golfOutline,
         mdIcon: golfSharp,
       },
-      {
-        title: "资料查询",
-        url: "/archive",
-        iosIcon: libraryOutline,
-        mdIcon: librarySharp,
-      },
+      // {
+      //   title: "资料查询",
+      //   url: "/archive",
+      //   iosIcon: libraryOutline,
+      //   mdIcon: librarySharp,
+      // },
       {
         title: "其他链接",
         url: "/links",

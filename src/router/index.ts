@@ -14,10 +14,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "/stages",
     component: () => import("../views/Stages.vue"),
   },
-  {
-    path: "/archive",
-    component: () => import("../views/Archive.vue"),
-  },
+  // {
+  //   path: "/archive",
+  //   component: () => import("../views/Archive.vue"),
+  // },
   {
     path: "/links",
     component: () => import("../views/Links.vue"),

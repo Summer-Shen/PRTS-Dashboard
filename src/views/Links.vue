@@ -16,8 +16,17 @@
         </ion-toolbar>
       </ion-header>
 
-      <!-- <div id="container">
-        <strong class="capitalize">{{ $route.params.id }}</strong>
+      <div id="container">
+        <ion-grid>
+          <ion-row>
+            <ion-col> ion-col </ion-col>
+            <ion-col> ion-col </ion-col>
+            <ion-col> ion-col </ion-col>
+            <ion-col> ion-col </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <!-- <strong class="capitalize">{{ $route.params.id }}</strong>
         <p>
           Explore
           <a
@@ -26,8 +35,8 @@
             href="https://ionicframework.com/docs/components"
             >UI Components</a
           >
-        </p>
-      </div> -->
+        </p> -->
+      </div>
     </ion-content>
   </ion-page>
 </template>
@@ -41,6 +50,9 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  IonGrid,
+  IonRow,
+  IonCol,
 } from "@ionic/vue";
 
 export default {
@@ -53,6 +65,9 @@ export default {
     IonPage,
     IonTitle,
     IonToolbar,
+    IonGrid,
+    IonRow,
+    IonCol,
   },
 };
 </script>
