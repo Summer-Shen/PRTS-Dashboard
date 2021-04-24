@@ -70,6 +70,7 @@ export default {
     IonCardHeader,
     IonCardContent,
   },
+
   data() {
     return {
       links: [
