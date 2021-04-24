@@ -19,10 +19,16 @@
       <div id="container">
         <ion-grid>
           <ion-row>
-            <ion-col> ion-col </ion-col>
-            <ion-col> ion-col </ion-col>
-            <ion-col> ion-col </ion-col>
-            <ion-col> ion-col </ion-col>
+            <ion-col size="6" v-for="link in links" :key="link.name">
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title>{{ link.name }}</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  {{ link.desc }}
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
           </ion-row>
         </ion-grid>
 
@@ -68,6 +74,24 @@ export default {
     IonGrid,
     IonRow,
     IonCol,
+  },
+  data() {
+    return {
+      links: [
+        {
+          name: "明日方舟官网",
+          addr: "http://ak.hypergryph.com/",
+          logo: "",
+          desc: "明日方舟官方网站",
+        },
+        {
+          name: "NGA",
+          addr: "http://bbs.nga.cn/thread.php?fid=-34587507",
+          logo: "",
+          desc: "明日方舟-罗德岛驻艾泽拉斯大使馆",
+        },
+      ],
+    };
   },
 };
 </script>
