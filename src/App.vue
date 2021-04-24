@@ -54,7 +54,7 @@
   </IonApp>
 </template>
 
-<script lang="ts">
+<script >
 import {
   IonApp,
   IonContent,
@@ -156,7 +156,7 @@ export default defineComponent({
       librarySharp,
       linkOutline,
       linkSharp,
-      isSelected: (url: string) => (url === route.path ? "selected" : ""),
+      isSelected: (url) => (url === route.path ? "selected" : ""),
     };
   },
 });
