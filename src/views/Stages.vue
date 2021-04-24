@@ -16,18 +16,20 @@
         </ion-toolbar>
       </ion-header>
 
-      <!-- <div id="container">
-        <strong class="capitalize">{{ $route.params.id }}</strong>
-        <p>
-          Explore
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://ionicframework.com/docs/components"
-            >UI Components</a
-          >
-        </p>
-      </div> -->
+      <div id="container">
+        <ion-grid>
+          <ion-row v-for="stage in stages" :key="stage.stageName">
+            <ion-col>
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title> </ion-card-title>
+                </ion-card-header>
+                <ion-card-content> </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
     </ion-content>
   </ion-page>
 </template>
@@ -53,6 +55,40 @@ export default {
     IonPage,
     IonTitle,
     IonToolbar,
+  },
+  data() {
+    return {
+      stages: [
+        // some example data of recently popular stages
+        {
+          stageName: "WD-8 大雪将至",
+          stageId: "act18d0_08",
+          itemName: "RMA70-12",
+          itemId: "30103",
+          apCost: 18,
+          quantity: 0,
+          times: 0,
+        },
+        {
+          stageName: "WD-7 家园",
+          stageId: "act18d0_07",
+          itemName: "酮凝集组",
+          itemId: "30053",
+          apCost: 18,
+          quantity: 0,
+          times: 0,
+        },
+        {
+          stageName: "WD-6 帕夏的梦",
+          stageId: "act18d0_06",
+          itemName: "聚酸酯组",
+          itemId: "30033",
+          apCost: 15,
+          quantity: 0,
+          times: 0,
+        },
+      ],
+    };
   },
 };
 </script>
