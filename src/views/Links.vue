@@ -48,6 +48,9 @@ import {
   IonGrid,
   IonRow,
   IonCol,
+  IonCard,
+  IonCardHeader,
+  IonCardContent,
 } from "@ionic/vue";
 
 export default {
@@ -63,6 +66,9 @@ export default {
     IonGrid,
     IonRow,
     IonCol,
+    IonCard,
+    IonCardHeader,
+    IonCardContent,
   },
   data() {
     return {

@@ -22,9 +22,19 @@
             <ion-col>
               <ion-card>
                 <ion-card-header>
-                  <ion-card-title> </ion-card-title>
+                  <ion-card-title>{{ stage.stageName }}</ion-card-title>
                 </ion-card-header>
-                <ion-card-content> </ion-card-content>
+                <ion-card-content>
+                  {{ stage.itemName }}
+                  单件平均理智
+                  {{
+                    stage.quantity === 0
+                      ? "N/A"
+                      : ((stage.times * stage.apCost) / stage.quantity).toFixed(
+                          2
+                        )
+                  }}
+                </ion-card-content>
               </ion-card>
             </ion-col>
           </ion-row>
@@ -43,6 +53,13 @@ import {
   IonPage,
   IonTitle,
   IonToolbar,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
 } from "@ionic/vue";
 
 export default {
@@ -55,7 +72,15 @@ export default {
     IonPage,
     IonTitle,
     IonToolbar,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
   },
+
   data() {
     return {
       stages: [
@@ -66,8 +91,8 @@ export default {
           itemName: "RMA70-12",
           itemId: "30103",
           apCost: 18,
-          quantity: 0,
-          times: 0,
+          quantity: 18797,
+          times: 38487,
         },
         {
           stageName: "WD-7 家园",
@@ -75,8 +100,8 @@ export default {
           itemName: "酮凝集组",
           itemId: "30053",
           apCost: 18,
-          quantity: 0,
-          times: 0,
+          quantity: 6178,
+          times: 9375,
         },
         {
           stageName: "WD-6 帕夏的梦",
@@ -84,8 +109,8 @@ export default {
           itemName: "聚酸酯组",
           itemId: "30033",
           apCost: 15,
-          quantity: 0,
-          times: 0,
+          quantity: 2659,
+          times: 3881,
         },
       ],
     };
