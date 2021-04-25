@@ -20,14 +20,16 @@
         <ion-grid>
           <ion-row>
             <ion-col size="6" v-for="link in links" :key="link.name">
-              <ion-card>
-                <ion-card-header>
-                  <ion-card-title>{{ link.name }}</ion-card-title>
-                </ion-card-header>
-                <ion-card-content>
-                  {{ link.desc }}
-                </ion-card-content>
-              </ion-card>
+              <a :href="link.addr">
+                <ion-card>
+                  <ion-card-header>
+                    <ion-card-title>{{ link.name }}</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    {{ link.desc }}
+                  </ion-card-content>
+                </ion-card>
+              </a>
             </ion-col>
           </ion-row>
         </ion-grid>
