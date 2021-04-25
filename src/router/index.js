@@ -3,11 +3,7 @@ import { createRouter, createWebHistory } from "@ionic/vue-router";
 const routes = [
   {
     path: "",
-    redirect: "/links", // todo
-  },
-  {
-    path: "/announcements",
-    component: () => import("../views/Announcements.vue"),
+    redirect: "/stages",
   },
   {
     path: "/stages",

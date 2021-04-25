@@ -77,13 +77,11 @@ export default {
         {
           name: "明日方舟官网",
           addr: "http://ak.hypergryph.com/",
-          logo: "",
           desc: "明日方舟官方网站",
         },
         {
           name: "NGA",
           addr: "http://bbs.nga.cn/thread.php?fid=-34587507",
-          logo: "",
           desc: "明日方舟-罗德岛驻艾泽拉斯大使馆",
         },
       ],

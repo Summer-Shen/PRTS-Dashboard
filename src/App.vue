@@ -30,23 +30,6 @@
               </ion-item>
             </ion-menu-toggle>
           </ion-list>
-
-          <!-- <ion-list id="labels-list">
-            <ion-list-header>Labels</ion-list-header>
-
-            <ion-item
-              v-for="(label, index) in labels"
-              lines="none"
-              :key="index"
-            >
-              <ion-icon
-                slot="start"
-                :ios="bookmarkOutline"
-                :md="bookmarkSharp"
-              ></ion-icon>
-              <ion-label>{{ label }}</ion-label>
-            </ion-item>
-          </ion-list> -->
         </ion-content>
       </ion-menu>
       <ion-router-outlet id="main-content"></ion-router-outlet>
@@ -102,23 +85,11 @@ export default defineComponent({
     const selectedIndex = ref(0);
     const appPages = [
       {
-        title: "官方公告",
-        url: "/announcements",
-        iosIcon: newspaperOutline,
-        mdIcon: newspaperSharp,
-      },
-      {
         title: "关卡掉落",
         url: "/stages",
         iosIcon: golfOutline,
         mdIcon: golfSharp,
       },
-      // {
-      //   title: "资料查询",
-      //   url: "/archive",
-      //   iosIcon: libraryOutline,
-      //   mdIcon: librarySharp,
-      // },
       {
         title: "其他链接",
         url: "/links",
@@ -126,14 +97,6 @@ export default defineComponent({
         mdIcon: linkSharp,
       },
     ];
-    // const labels = [
-    //   "Family",
-    //   "Friends",
-    //   "Notes",
-    //   "Work",
-    //   "Travel",
-    //   "Reminders",
-    // ];
 
     const path = window.location.pathname;
     if (path !== undefined) {
