@@ -20,7 +20,7 @@
         <ion-grid>
           <ion-row>
             <ion-col size="6" v-for="link in links" :key="link.name">
-              <a :href="link.addr">
+              <a @click="presentAlert(link.addr)">
                 <ion-card>
                   <ion-card-header>
                     <ion-card-title>{{ link.name }}</ion-card-title>
@@ -53,6 +53,7 @@ import {
   IonCard,
   IonCardHeader,
   IonCardContent,
+  alertController,
 } from "@ionic/vue";
 
 export default {
@@ -88,6 +89,28 @@ export default {
         },
       ],
     };
+  },
+
+  methods: {
+    async presentAlert(addr) {
+      const alert = await alertController.create({
+        header: "提示",
+        message: "是否前往" + addr + "？",
+        buttons: [
+          {
+            text: "确认",
+            handler: () => {
+              window.location.href = addr;
+            },
+          },
+          {
+            text: "取消",
+            handler: () => {},
+          },
+        ],
+      });
+      return alert.present();
+    },
   },
 };
 </script>
